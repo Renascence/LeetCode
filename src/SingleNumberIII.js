@@ -19,14 +19,9 @@ var singleNumber = function(nums) {
     for(var x = 1 ; x < xor.toString(2).length ; x++){
         mask *= 2
     }
-    console.log(mask)
     for(var j=0;j<nums.length;j++){
     	if(nums[j]&mask){ a ^= nums[j] }
     	else {b ^= nums[j]}
     }
     return [a,b]
 };
-
-
-res = singleNumber([1,2,1,3,2,5])
-console.log(res)
