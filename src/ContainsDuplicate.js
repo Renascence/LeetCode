@@ -11,8 +11,7 @@ var containsDuplicate = function(nums) {
 		return false
 	}
  	nums = nums.sort();
- 	for(i in nums){
- 		console.log(nums[i]==nums[i+1]);
+ 	for(var i=0 ; i<nums.length;i++){
  		if(nums[i] == nums[i+1]){
  			return true
  		}
