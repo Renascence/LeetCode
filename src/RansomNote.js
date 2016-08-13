@@ -18,9 +18,6 @@
  	for (var i = 0; i < magazine.length; i++) {
  		res[(magazine.charCodeAt(i))-97]++;
  	}
- 	console.log(arr);
- 	console.log(res);
-
  	for(var i =0 ; i<25;i++){
  		if(arr[i]>res[i]){
  			return false
@@ -28,5 +25,3 @@
  	}
  	return true
  };
-
-canConstruct('a','b')
