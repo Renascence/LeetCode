@@ -10,6 +10,6 @@ var missingNumber = function(nums) {
 	for (var i = 0; i < len; i++) {
 		sum -= nums[i]
 	}
-	return len
+	return sum
 };
 
