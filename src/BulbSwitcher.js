@@ -5,5 +5,5 @@
  * @return {number}
  */
 var bulbSwitch = function(n) {
-	return Math.sqrt('n')
+	return Math.floor(Math.sqrt(n))
 };
