@@ -5,28 +5,21 @@
  * @return {number}
  */
   var maxProduct = function(words) {
- 	function check(str1,str2){
- 		var tem1 = []
- 		for(var i = 0;i<26;i++){
- 			tem1[i] = 0
- 		}
- 		for (var i = 0; i < str1.length; i++) {
- 			tem1[(str1.charCodeAt(i))-97]++;
- 		}
- 		for (var i = 0; i < str2.length; i++) {
- 			if(tem1[(str2.charCodeAt(i))-97]!=0){return false;}
- 		}
- 		return true
- 	}
- 	for (var i = 0; i < elements.length; i++) {
- 		expression
- 	}
+  	var len = words.length
+  	var map = []
+  	for (var i = 0; i < len; i++) {
+  		var temp = 0
+  		for (var j = 0; j < words[i].length; j++) {
+  			temp |= Math.pow(2,(words[i].charCodeAt(j))-97)
+  		}
+  		map[i] = temp
+  	}
  	var res = 0
- 	for (var i = 0; i < words.length; i++) {
- 		for (var j = i+1; j < words.length; j++) {
- 			if(check(words[i],words[j])){
- 				len = words[i].length*words[j].length
- 				res = res > len ? res : len
+ 	for (var i = 0; i < len; i++) {
+ 		for (var j=0;j<i;j++) {
+ 			if(!(map[i]&map[j])){
+ 				a = words[i].length*words[j].length
+ 				res = res > a ? res : a
  			}
  		}
  	}
