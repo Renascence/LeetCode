@@ -16,5 +16,6 @@ var reverse = function(x) {
 	while(x[0] == 0){
 		x = x.substring(1)
 	}
+	if( parseInt(x) > 2147483648) return 0
 	return parseInt(flag+x)
 };
