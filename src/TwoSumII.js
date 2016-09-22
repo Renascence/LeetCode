@@ -13,13 +13,18 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function(numbers, target) {
-  var len = numbers.length
-  for(var i =0;i< len-1;i++){
-    for(var j = i+1;j<len;j++){
-      if(numbers[i] + numbers[j] == target){
-        return [i+1,j+1]
-      }
+var twoSum = function (numbers, target) {
+  var j = numbers.length - 1
+  var i = 0
+  while (i < j) {
+    if ( numbers[i] + numbers[j] < target) {
+      i++
     }
-  }  
+    else if ( numbers[i] + numbers[j] > target) {
+      j--
+    }
+    else {
+      return [i + 1, j + 1]
+    }
+  }
 };
