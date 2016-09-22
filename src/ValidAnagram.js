@@ -5,8 +5,6 @@
  * @param {string} t
  * @return {boolean}
  */
-var isAnagram = function(s, t) {
-	console.log( s.split('').sort());
-	console.log( t.split('').sort());
+var isAnagram = function (s, t) {
     return s.split('').sort() == t.split('').sort()
 };
