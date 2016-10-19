@@ -17,6 +17,7 @@ var levelOrder = function (root) {
   return res
 
   function traverse(root, lv, res) {
+    console.log('--->',lv,res)
     if (!root) return;
     if (lv > res.length) res.push([])
     res[lv - 1].push(root.val)
