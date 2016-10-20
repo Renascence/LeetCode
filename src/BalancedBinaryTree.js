@@ -17,7 +17,6 @@ var isBalanced = function (root) {
   if (root.left) var left = count(root.left, 0);
   if (root.right) var right = count(root.right, 0);
 
-  console.log(left, right)
   if (Math.max(left, right) - Math.min(left, right) <= 1) return isBalanced(root.left) && isBalanced(root.right)
   else return false
 
