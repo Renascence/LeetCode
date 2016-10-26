@@ -3,8 +3,8 @@
  * @return {string}
  */
 var countAndSay = function (n) {
-  if(n == 1) return '1'
-  if(n == 2)  return '11'
+  if (n == 1) return '1'
+  if (n == 2) return '11'
   function count(n) {
     var nArr = n.toString().split('');
     var count = []
@@ -27,8 +27,8 @@ var countAndSay = function (n) {
     }
     return res
   }
-  fir = count(1)
-  for (var j = 0; j < n-2; j++) {
+  fir = 1
+  for (var j = 0; j < n - 1; j++) {
     fir = count(fir)
   }
   return fir
