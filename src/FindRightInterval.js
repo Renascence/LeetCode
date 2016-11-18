@@ -1,20 +1,30 @@
 var findRightInterval = function (intervals) {
   var filter = []
+  var filter1 = []  
   for (var i = 0; i < intervals.length; i++) {
     filter.push(intervals[i].start)
   }
-  filter = filter.sort()
+  for (var i = 0; i < intervals.length; i++) {
+    filter1.push(intervals[i].start)
+  }
+  filter = filter.sort(function (a, b) {
+    return a - b
+  })
   var res = []
   for (i = 0; i < intervals.length; i++) {
-    if(intervals[i].end < filter[0]) res[i] = -1
+    if (intervals[i].end > filter[filter.length - 1]) {
+      res[i] = -1
+    }
+    else if (intervals[i].end == filter[filter.length - 1]) {
+      res[i] = filter1.indexOf(filter[filter.length - 1])
+    }
     else {
-      for (var j = 0; j < filter.length; j++){
-        if(filter[j] > intervals[i].end) res.push(j-1)
-        break;
+      for (var j = 1; j < filter.length; j++) {
+        if (intervals[i].end < filter[j] && intervals[i].end >= filter[j - 1]) {
+          res[i] = filter1.indexOf(filter[j - 1])
+        }
       }
     }
-    //   console.log(filter, intervals[i].end, BinarySearch(filter, intervals[i].end))
-    // res.push(BinarySearch(filter, intervals[i].end))
   }
   return res
 };
