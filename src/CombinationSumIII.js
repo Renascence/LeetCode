@@ -27,4 +27,3 @@ var combinationSum3 = function (k, n) {
   dfs(res, temp, 1, k, n)
   return res
 };
-1
