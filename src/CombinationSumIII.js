@@ -6,12 +6,10 @@
 var combinationSum3 = function (k, n) {
   function dfs(res, temp, start, k, n) {
     if (n < 0 || k < 0) return
-    console.log('====', n, k, temp)
     if (n == 0 && k == 0) {
-      res[res.length] =[]      
-      // res.push(temp)
-      for(var j in temp) {
-        res[res.length-1].push(temp[j])
+      res[res.length] = []
+      for (var j in temp) {
+        res[res.length - 1].push(temp[j])
       }
       return
     }
