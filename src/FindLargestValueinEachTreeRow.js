@@ -15,12 +15,20 @@ var largestValues = function (root) {
 
   function mapTree(root, lv) {
     if (!arr[lv]) arr[lv] = []
-    if(!root) return
-    if(root.left == null && root.right == null) return
+    if (!root) return
     arr[lv].push(root.val)
-    mapTree(root.left,lv+1)
-    mapTree(root.right,lv+1)
+    mapTree(root.left, lv + 1)
+    mapTree(root.right, lv + 1)
   }
-  mapTree(root,0)
-  console.log(arr)
+  mapTree(root, 0)
+  for (var i in arr) {
+    if (arr[i].length != 0) {
+      var max = arr[i][0]
+      for (var j in arr[i]) {
+        max = max > arr[i][j] ? max : arr[i][j]
+      }
+      res.push(max)
+    }
+  }
+  return res
 };
