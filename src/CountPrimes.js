@@ -30,5 +30,3 @@ var countPrimes = function (n) {
   }
   return res
 };
-
-console.log(countPrimes(5))
