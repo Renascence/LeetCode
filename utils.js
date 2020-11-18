@@ -9,6 +9,6 @@ if (!name) {
 
 fs.writeFile('./src/' + name + '.js', '', (err) => {
   if (!err) {
-    console.log(name + 'created')
+    console.log('src/' + name + ' created')
   }
 })
