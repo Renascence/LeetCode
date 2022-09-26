@@ -10,14 +10,14 @@
  * @return {number[]}
  */
 var findBottomLeftValue = function (root) {
-  var arr = []
+  var arr = [];
   function mapTree(root, lv) {
-    if (!arr[lv]) arr[lv] = []
-    if (!root) return
-    arr[lv].push(root.val)
-    mapTree(root.left, lv + 1)
-    mapTree(root.right, lv + 1)
+    if (!arr[lv]) arr[lv] = [];
+    if (!root) return;
+    arr[lv].push(root.val);
+    mapTree(root.left, lv + 1);
+    mapTree(root.right, lv + 1);
   }
-  mapTree(root, 0)
-  return arr[arr.length -2][0]
+  mapTree(root, 0);
+  return arr[arr.length - 2][0];
 };

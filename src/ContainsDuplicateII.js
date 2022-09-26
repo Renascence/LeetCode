@@ -6,15 +6,13 @@
  * @return {boolean}
  */
 var containsNearbyDuplicate = function (nums, k) {
-  if (nums.length <= 1) return false
-  var flag = false
+  if (nums.length <= 1) return false;
+  var flag = false;
   for (var i = 0; i < nums.length; i++) {
-    var index = nums.indexOf(nums[i], i + 1)
-    console.log(index)
-    if (index != -1 && index - i  <= k) {
-      flag = true
+    var index = nums.indexOf(nums[i], i + 1);
+    if (index != -1 && index - i <= k) {
+      flag = true;
     }
   }
-  return flag
+  return flag;
 };
-

@@ -4,27 +4,27 @@
  * @return {number[]}
  */
 var relativeSortArray = function (arr1, arr2) {
-  let obj = {}
-  arr1.forEach(v => {
+  let obj = {};
+  arr1.forEach((v) => {
     if (obj[v]) {
-      obj[v]++
+      obj[v]++;
     } else {
-      obj[v] = 1
+      obj[v] = 1;
     }
-  })
-  let res = []
-  arr2.forEach(v => {
+  });
+  let res = [];
+  arr2.forEach((v) => {
     for (let i = 0; i < obj[v]; i++) {
-      res.push(v)
+      res.push(v);
     }
-    delete obj[v]
-  })
+    delete obj[v];
+  });
   let rest = [];
-  Object.keys(obj).forEach(v => {
+  Object.keys(obj).forEach((v) => {
     for (let i = 0; i < obj[v]; i++) {
-      rest.push(~~v)
+      rest.push(~~v);
     }
-  })
-  rest.sort((a, b) => a - b)
-  return res.concat(rest)
+  });
+  rest.sort((a, b) => a - b);
+  return res.concat(rest);
 };

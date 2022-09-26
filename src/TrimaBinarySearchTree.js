@@ -15,15 +15,14 @@ var trimBST = function (root, L, R) {
   function trim(root) {
     if (!root) return null;
     if (root.val < L) {
-      return trim(root.right)
+      return trim(root.right);
     }
     if (root.val > R) {
-      return trim(root.left)
+      return trim(root.left);
     }
-    root.left = trim(root.left)
-    root.right = trim(root.right)
-    console.log(root)
+    root.left = trim(root.left);
+    root.right = trim(root.right);
     return root;
   }
-  return trim(root)
+  return trim(root);
 };

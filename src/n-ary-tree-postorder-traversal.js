@@ -12,12 +12,12 @@
 var postorder = function (root) {
   let res = [];
   function loop(node) {
-    if (!node) return
-    node.children.forEach(c => {
-      loop(c)
-    })
-    res.push(node.val)
+    if (!node) return;
+    node.children.forEach((c) => {
+      loop(c);
+    });
+    res.push(node.val);
   }
-  loop(root)
-  return res
+  loop(root);
+  return res;
 };

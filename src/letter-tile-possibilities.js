@@ -3,12 +3,12 @@
  * @return {number}
  */
 var numTilePossibilities = function (tiles) {
-  const chars = tiles.split('')
-  let arr = []
+  const chars = tiles.split('');
+  let arr = [];
   arr.length = 26;
-  arr.fill(0)
+  arr.fill(0);
   function backTrack(arr) {
-    let sum = 0
+    let sum = 0;
     for (let i = 0; i < 26; i++) {
       if (arr[i] !== 0) {
         sum++;
@@ -17,10 +17,10 @@ var numTilePossibilities = function (tiles) {
         arr[i]++;
       }
     }
-    return sum
+    return sum;
   }
-  for(let i = 0; i< chars.length; i ++) {
-    arr[chars[i].charCodeAt() - 65] ++
+  for (let i = 0; i < chars.length; i++) {
+    arr[chars[i].charCodeAt() - 65]++;
   }
-  return backTrack(arr)
+  return backTrack(arr);
 };

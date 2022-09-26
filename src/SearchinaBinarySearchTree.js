@@ -11,19 +11,19 @@
  * @return {TreeNode}
  */
 var searchBST = function (root, val) {
-  let res = null
+  let res = null;
 
   function loop(root) {
     if (!root) {
-      return
+      return;
     }
     if (root.val === val) {
-      res = root
+      res = root;
     } else {
-      loop(root.left)
-      loop(root.right)
+      loop(root.left);
+      loop(root.right);
     }
   }
-  loop(root)
-  return res
+  loop(root);
+  return res;
 };

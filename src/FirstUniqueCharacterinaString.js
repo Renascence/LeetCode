@@ -4,15 +4,15 @@
  * @param {string} s
  * @return {number}
  */
-var firstUniqChar = function(s) {
-    var len = s.length
-    if(len == 1) {
-    	return 0
+var firstUniqChar = function (s) {
+  var len = s.length;
+  if (len == 1) {
+    return 0;
+  }
+  for (var i = 0; i < len - 1; i++) {
+    if (s.indexOf(s[i]) == i && s.indexOf(s[i], i + 1) == -1) {
+      return i;
     }
-    for (var i = 0; i < len - 1 ; i++) {
-    	if(s.indexOf(s[i])==i && s.indexOf(s[i],i+1)==-1){
-    		return i
-    	}
-    }
-    return -1
+  }
+  return -1;
 };

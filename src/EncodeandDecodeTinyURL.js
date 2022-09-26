@@ -4,11 +4,11 @@
  * @param {string} longUrl
  * @return {string}
  */
-const urls={}
+const urls = {};
 var encode = function (longUrl) {
-  const code = parseInt(Math.random()*100000)
-  urls[code] = longUrl
-  return `http://tinyurl.com/${code}`
+  const code = parseInt(Math.random() * 100000);
+  urls[code] = longUrl;
+  return `http://tinyurl.com/${code}`;
 };
 
 /**
@@ -18,7 +18,7 @@ var encode = function (longUrl) {
  * @return {string}
  */
 var decode = function (shortUrl) {
-  return urls[shortUrl.split('/').reverse()[0]]
+  return urls[shortUrl.split('/').reverse()[0]];
 };
 
 /**

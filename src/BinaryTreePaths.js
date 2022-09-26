@@ -12,13 +12,13 @@
  * @return {string[]}
  */
 var binaryTreePaths = function (root) {
-  var res = ''
-  if (root) findPath(root, root.val)
-  return res
+  var res = '';
+  if (root) findPath(root, root.val);
+  return res;
 
   function findPath(n, str) {
-    if (n.left == null && n.right == null) res = res + str
-    if (n.left != null) findPath(n.left, str + '->' + n.left.val)
-    if (n.right != null) findPath(n.right, str + '->' + n.right.val)   
+    if (n.left == null && n.right == null) res = res + str;
+    if (n.left != null) findPath(n.left, str + '->' + n.left.val);
+    if (n.right != null) findPath(n.right, str + '->' + n.right.val);
   }
 };

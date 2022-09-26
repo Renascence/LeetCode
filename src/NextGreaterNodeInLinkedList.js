@@ -14,25 +14,25 @@ var nextLargerNodes = function (head) {
 
   function cir(head) {
     if (head) {
-      data.push(head.val)
-      cir(head.next)
+      data.push(head.val);
+      cir(head.next);
     }
   }
-  cir(head)
+  cir(head);
   let i = 0;
   for (i = 0; i < data.length; i++) {
     let j = i + 1;
     while (j <= data.length) {
       if (data[j] > data[i]) {
-        data[i] = data[j]
+        data[i] = data[j];
         break;
       } else if (j == data.length) {
-        data[i] = 0
+        data[i] = 0;
       }
       j++;
     }
   }
-  data[data.length - 1] = 0
+  data[data.length - 1] = 0;
 
-  return data
+  return data;
 };

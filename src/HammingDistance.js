@@ -4,11 +4,11 @@
  * @return {number}
  */
 var hammingDistance = function (x, y) {
-  var num = x ^ y
-  var res = 0
-  var bin = num.toString(2)
+  var num = x ^ y;
+  var res = 0;
+  var bin = num.toString(2);
   for (var i in bin) {
-    if (bin[i] == 1) res++
+    if (bin[i] == 1) res++;
   }
-  return res
+  return res;
 };

@@ -6,12 +6,12 @@
  * @param {number[]} nums
  * @return {void} Do not return anything, modify nums in-place instead.
  */
-var moveZeroes = function(nums) {
-	var len = nums.length
-  for(var j=len-1; j >= 0 ; j --){
-  	if(!nums[j]){
-  		nums.splice(j,1)
-  		nums[len-1] = 0
-  	}
+var moveZeroes = function (nums) {
+  var len = nums.length;
+  for (var j = len - 1; j >= 0; j--) {
+    if (!nums[j]) {
+      nums.splice(j, 1);
+      nums[len - 1] = 0;
+    }
   }
 };

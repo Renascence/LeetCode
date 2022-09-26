@@ -8,35 +8,34 @@
  * @param {number[]} nums
  * @return {number[]}
  */
-var productExceptSelf = function(nums) {
-    var he = 1
-    var res = []
-    var mark
-    var count = 0
-    for(var i =0 ; i < nums.length ; i++){
-        if(nums[i]!=0){
-        he *= nums[i]
-        }
-        else{
-            count ++
-            mark = i
-        }
+var productExceptSelf = function (nums) {
+  var he = 1;
+  var res = [];
+  var mark;
+  var count = 0;
+  for (var i = 0; i < nums.length; i++) {
+    if (nums[i] != 0) {
+      he *= nums[i];
+    } else {
+      count++;
+      mark = i;
     }
-    if(count == 1){
-        for(b in nums){
-            res[b] = 0
-        }
-        res[mark] = he;
-        return res
+  }
+  if (count == 1) {
+    for (b in nums) {
+      res[b] = 0;
     }
-    if(count >= 2){
-        for(a in nums){
-            res[a] = 0
-        }
-        return res
+    res[mark] = he;
+    return res;
+  }
+  if (count >= 2) {
+    for (a in nums) {
+      res[a] = 0;
     }
-    for(var j =0 ; j < nums.length ; j++){
-        nums[j] == 0 ? res.push(he) : res.push(he/nums[j])
-    }
-    return res
+    return res;
+  }
+  for (var j = 0; j < nums.length; j++) {
+    nums[j] == 0 ? res.push(he) : res.push(he / nums[j]);
+  }
+  return res;
 };

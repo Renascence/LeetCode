@@ -3,5 +3,5 @@
  * @return {number}
  */
 var singleNonDuplicate = function (nums) {
-  return nums.reduce((a, b) => a ^ b)
+  return nums.reduce((a, b) => a ^ b);
 };

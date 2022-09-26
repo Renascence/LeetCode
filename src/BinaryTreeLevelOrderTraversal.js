@@ -12,16 +12,15 @@
  * @return {number[][]}
  */
 var levelOrder = function (root) {
-  var res = []
-  traverse(root, 1, res)
-  return res
+  var res = [];
+  traverse(root, 1, res);
+  return res;
 
   function traverse(root, lv, res) {
-    console.log('--->',lv,res)
     if (!root) return;
-    if (lv > res.length) res.push([])
-    res[lv - 1].push(root.val)
-    traverse(root.left, lv + 1, res)
-    traverse(root.right, lv + 1, res)
+    if (lv > res.length) res.push([]);
+    res[lv - 1].push(root.val);
+    traverse(root.left, lv + 1, res);
+    traverse(root.right, lv + 1, res);
   }
 };

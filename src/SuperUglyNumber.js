@@ -3,7 +3,13 @@
 // Super ugly numbers are positive numbers whose all prime factors are in the given prime list primes of size k. For example, [1, 2, 4, 7, 8, 13, 14, 16, 19, 26, 28, 32] is the sequence of the first 12 super ugly numbers given primes = [2, 7, 13, 19] of size 4.
 
 var nthSuperUglyNumber = function (n, primes) {
-  var i, dp = [1], prime = [], dpIndex = 1, tmp, min, minIndex;
+  var i,
+    dp = [1],
+    prime = [],
+    dpIndex = 1,
+    tmp,
+    min,
+    minIndex;
   for (i = 0; i < primes.length; i++) prime[i] = 0;
   while (dpIndex <= n) {
     min = Infinity;

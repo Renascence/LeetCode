@@ -17,32 +17,32 @@
  * @return {number}
  */
 var pathSum = function (root, sum) {
-  if (root == null) return 0
-  var sumArr = []
-  var res = 0
-  recursion(root)
-  return res
+  if (root == null) return 0;
+  var res = 0;
+  recursion(root);
+  return res;
 
   function calSum(root, val) {
     if (root.val + val == sum) {
-      res++
+      res++;
     }
-    if (root.left == null && root.right == null) { console.log(root.val) }
-    else if (root.left == null) { calSum(root.right, val + root.val) }
-    else if (root.right == null) calSum(root.left, val + root.val)
+    if (root.left == null && root.right == null) {
+    } else if (root.left == null) {
+      calSum(root.right, val + root.val);
+    } else if (root.right == null) calSum(root.left, val + root.val);
     else {
-      calSum(root.right, val + root.val)
-      calSum(root.left, val + root.val)
+      calSum(root.right, val + root.val);
+      calSum(root.left, val + root.val);
     }
   }
   function recursion(root) {
-    calSum(root, 0)
-    if (root.left == null && root.right == null) { console.log('recu') }
-    else if (root.left == null) recursion(root.right, 0)
-    else if (root.right == null) recursion(root.left, 0)
+    calSum(root, 0);
+    if (root.left == null && root.right == null) {
+    } else if (root.left == null) recursion(root.right, 0);
+    else if (root.right == null) recursion(root.left, 0);
     else {
-      recursion(root.right, 0)
-      recursion(root.left, 0)
+      recursion(root.right, 0);
+      recursion(root.left, 0);
     }
   }
 };

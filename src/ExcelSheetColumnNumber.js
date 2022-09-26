@@ -6,13 +6,11 @@
  * @param {string} s
  * @return {number}
  */
-var titleToNumber = function(s) {
-    var res = 0;
-    var len = s.length;
-    for (var i = 0; i < len ; i ++) {
-    	res = res * 26 + s.charCodeAt(i) - 64
-    }
-    return res;
+var titleToNumber = function (s) {
+  var res = 0;
+  var len = s.length;
+  for (var i = 0; i < len; i++) {
+    res = res * 26 + s.charCodeAt(i) - 64;
+  }
+  return res;
 };
-
-console.log(titleToNumber('AC'));

@@ -11,16 +11,16 @@
  */
 var tree2str = function (t) {
   const loop = (tree) => {
-    if (!tree) return ''
-    let str = ''
-    str += tree.val
+    if (!tree) return '';
+    let str = '';
+    str += tree.val;
     if (tree.right) {
-      str += `(${loop(tree.left)})`
-      str += `(${loop(tree.right)})`
+      str += `(${loop(tree.left)})`;
+      str += `(${loop(tree.right)})`;
     } else if (tree.left) {
-      str += `(${loop(tree.left)})`
+      str += `(${loop(tree.left)})`;
     }
-    return str
-  }
-  return loop(t)
+    return str;
+  };
+  return loop(t);
 };

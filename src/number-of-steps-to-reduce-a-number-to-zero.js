@@ -1,13 +1,13 @@
 var numberOfSteps = function (num) {
-  if (num === 0) return 0
-  let res = 0
+  if (num === 0) return 0;
+  let res = 0;
   while (num !== 0) {
     if (num % 2 === 0) {
-      num = num / 2
+      num = num / 2;
     } else {
-      num--
+      num--;
     }
-    res++
+    res++;
   }
-  return res
+  return res;
 };

@@ -12,12 +12,11 @@
 var postorderTraversal = function (root) {
   const res = [];
   function loop(node) {
-    if(!node) return
-    loop(node.left)
-    loop(node.right)
-    res.push(node.val)
+    if (!node) return;
+    loop(node.left);
+    loop(node.right);
+    res.push(node.val);
   }
-  loop(root)
-  console.log(res)
-  return res
+  loop(root);
+  return res;
 };

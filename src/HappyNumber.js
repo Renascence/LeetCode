@@ -6,22 +6,22 @@
  * @param {number} n
  * @return {boolean}
  */
-var isHappy = function(n) {
-	var arr = []
-	function check(n){
-		if(n == 1) {
-			return true
-		}
-		if(arr.indexOf(n) != -1){
-			return false
-		}
-		arr.push(n)
-		var list = n.toString().split('')
-		temp = 0
-		for (var i = 0; i < list.length; i++) {
-			temp += Math.pow(list[i],2)
-		}
-		return check(temp)
-	}
-	return check(n)
+var isHappy = function (n) {
+  var arr = [];
+  function check(n) {
+    if (n == 1) {
+      return true;
+    }
+    if (arr.indexOf(n) != -1) {
+      return false;
+    }
+    arr.push(n);
+    var list = n.toString().split('');
+    temp = 0;
+    for (var i = 0; i < list.length; i++) {
+      temp += Math.pow(list[i], 2);
+    }
+    return check(temp);
+  }
+  return check(n);
 };

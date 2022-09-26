@@ -9,14 +9,14 @@
  * @param {string} t
  * @return {boolean}
  */
-var isSubsequence = function(s, t) {
-    var oldindex = t.indexOf(s[0])
-    for(var i = 1; i < s.length ; i++){
-        var newindex = t.indexOf(s[i],oldindex+1);
-        if(newindex == -1){
-            return false;
-        }
-        oldindex = newindex
+var isSubsequence = function (s, t) {
+  var oldindex = t.indexOf(s[0]);
+  for (var i = 1; i < s.length; i++) {
+    var newindex = t.indexOf(s[i], oldindex + 1);
+    if (newindex == -1) {
+      return false;
     }
-    return true
+    oldindex = newindex;
+  }
+  return true;
 };

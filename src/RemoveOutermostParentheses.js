@@ -3,19 +3,19 @@
  * @return {string}
  */
 var removeOuterParentheses = function (S) {
-  let count = 0
-  let prev = 0
-  let res = ''
+  let count = 0;
+  let prev = 0;
+  let res = '';
   for (let i = 0; i < S.length; i++) {
     if (S[i] === '(') {
-      count++
+      count++;
     } else {
-      count--
+      count--;
     }
     if (count === 0) {
-      res = res + S.slice(prev + 1, i)
-      prev = i + 1
+      res = res + S.slice(prev + 1, i);
+      prev = i + 1;
     }
   }
-  return res
+  return res;
 };

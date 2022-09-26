@@ -10,19 +10,19 @@
  * @param {number[]} A
  * @return {number}
  */
-var maxRotateFunction = function(A) {
-    var len = A.length
-    var res = 0;
-    var fir = 0;
-    var sum = 0;
-	for(var i = 0; i < len ; i ++){
-        sum += A[i]
-		fir = fir + i*A[i]
-	}
-    res = fir
-    for (var i = 1; i <= len; i++) {
-       fir = fir + sum - len * A[len - i]
-       res = res > fir ? res : fir
-    }
-    return res
+var maxRotateFunction = function (A) {
+  var len = A.length;
+  var res = 0;
+  var fir = 0;
+  var sum = 0;
+  for (var i = 0; i < len; i++) {
+    sum += A[i];
+    fir = fir + i * A[i];
+  }
+  res = fir;
+  for (var i = 1; i <= len; i++) {
+    fir = fir + sum - len * A[len - i];
+    res = res > fir ? res : fir;
+  }
+  return res;
 };

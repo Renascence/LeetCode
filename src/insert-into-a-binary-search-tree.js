@@ -12,14 +12,14 @@
  */
 var insertIntoBST = function (root, val) {
   function loop(root) {
-    if (!root) return new TreeNode(val)
+    if (!root) return new TreeNode(val);
     if (root.val > val) {
-      root.left = loop(root.left)
+      root.left = loop(root.left);
     } else {
-      root.right = loop(root.right)
+      root.right = loop(root.right);
     }
-    return root
+    return root;
   }
-  loop(root)
-  return root
+  loop(root);
+  return root;
 };

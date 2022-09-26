@@ -2,33 +2,39 @@
  * @param {number[][]} rectangle
  */
 var SubrectangleQueries = function (rectangle) {
-  this.arr = rectangle
-  return null
+  this.arr = rectangle;
+  return null;
 };
 
-/** 
- * @param {number} row1 
- * @param {number} col1 
- * @param {number} row2 
- * @param {number} col2 
+/**
+ * @param {number} row1
+ * @param {number} col1
+ * @param {number} row2
+ * @param {number} col2
  * @param {number} newValue
  * @return {void}
  */
-SubrectangleQueries.prototype.updateSubrectangle = function (row1, col1, row2, col2, newValue) {
+SubrectangleQueries.prototype.updateSubrectangle = function (
+  row1,
+  col1,
+  row2,
+  col2,
+  newValue
+) {
   for (let i = row1; i <= row2; i++) {
     for (let j = col1; j <= col2; j++) {
-      this.arr[i][j] = newValue
+      this.arr[i][j] = newValue;
     }
   }
 };
 
-/** 
- * @param {number} row 
+/**
+ * @param {number} row
  * @param {number} col
  * @return {number}
  */
 SubrectangleQueries.prototype.getValue = function (row, col) {
-  return this.arr[row][col]
+  return this.arr[row][col];
 };
 
 /**

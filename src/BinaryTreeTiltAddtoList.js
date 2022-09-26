@@ -10,14 +10,14 @@
  * @return {number}
  */
 var findTilt = function (root) {
-  let sum = 0
-  calMinus(root)
-  return sum
+  let sum = 0;
+  calMinus(root);
+  return sum;
   function calMinus(root) {
-    if (!root) return 0
-    let left = calMinus(root.left)
-    let right = calMinus(root.right)
-    sum += Math.abs(left - right)
-    return root.val + left + right
+    if (!root) return 0;
+    let left = calMinus(root.left);
+    let right = calMinus(root.right);
+    sum += Math.abs(left - right);
+    return root.val + left + right;
   }
 };

@@ -12,14 +12,14 @@
  * @return {boolean}
  */
 var isSymmetric = function (root) {
-  if (root == null) return true
+  if (root == null) return true;
   if (root.left == null && root.right == null) return true;
-  return isEqual(root.left, root.right)
+  return isEqual(root.left, root.right);
   function isEqual(left, right) {
     if (left == null && right == null) return true;
     if (left == null && right != null) return false;
     if (left != null && right == null) return false;
     if (left.val != right.val) return false;
-    return isEqual(left.left, right.right) && isEqual(left.right, right.left)
+    return isEqual(left.left, right.right) && isEqual(left.right, right.left);
   }
 };

@@ -9,10 +9,10 @@
  * @return {boolean}
  */
 var canJump = function (nums) {
-  if (nums.length == 1) return true
-  var last = nums.length - 1
+  if (nums.length == 1) return true;
+  var last = nums.length - 1;
   for (var i = nums.length - 2; i >= 0; i--) {
-    if (nums[i] + i >= last) last = i
+    if (nums[i] + i >= last) last = i;
   }
-  return last <= 0
+  return last <= 0;
 };

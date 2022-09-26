@@ -9,27 +9,25 @@
  * @param {string} t
  * @return {boolean}
  */
- var isIsomorphic = function(s, t) {
- 	var a = {}
- 	var b = {}
- 	var sarr = s.split('');
- 	var tarr = t.split('');
- 	if(sarr.length != tarr.length) return false;
- 	for (var i = 0; i < sarr.length; i++) {
- 		if(!a.hasOwnProperty(sarr[i])){
- 			a[sarr[i]] = tarr[i]
- 		}
- 		else if(a[sarr[i]] != tarr[i]){
- 			return false;
- 		}
- 	}
- 	for (var i = 0; i < tarr.length; i++) {
- 		if(!b.hasOwnProperty(tarr[i])){
- 			b[tarr[i]] = sarr[i]
- 		}
- 		else if(b[tarr[i]] != sarr[i]){
- 			return false;
- 		}
- 	}
- 	return true
- };
+var isIsomorphic = function (s, t) {
+  var a = {};
+  var b = {};
+  var sarr = s.split('');
+  var tarr = t.split('');
+  if (sarr.length != tarr.length) return false;
+  for (var i = 0; i < sarr.length; i++) {
+    if (!a.hasOwnProperty(sarr[i])) {
+      a[sarr[i]] = tarr[i];
+    } else if (a[sarr[i]] != tarr[i]) {
+      return false;
+    }
+  }
+  for (var i = 0; i < tarr.length; i++) {
+    if (!b.hasOwnProperty(tarr[i])) {
+      b[tarr[i]] = sarr[i];
+    } else if (b[tarr[i]] != sarr[i]) {
+      return false;
+    }
+  }
+  return true;
+};

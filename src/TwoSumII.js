@@ -7,24 +7,21 @@
 // Input: numbers={2, 7, 11, 15}, target=9
 // Output: index1=1, index2=2
 
-
 /**
  * @param {number[]} numbers
  * @param {number} target
  * @return {number[]}
  */
 var twoSum = function (numbers, target) {
-  var j = numbers.length - 1
-  var i = 0
+  var j = numbers.length - 1;
+  var i = 0;
   while (i < j) {
-    if ( numbers[i] + numbers[j] < target) {
-      i++
-    }
-    else if ( numbers[i] + numbers[j] > target) {
-      j--
-    }
-    else {
-      return [i + 1, j + 1]
+    if (numbers[i] + numbers[j] < target) {
+      i++;
+    } else if (numbers[i] + numbers[j] > target) {
+      j--;
+    } else {
+      return [i + 1, j + 1];
     }
   }
 };

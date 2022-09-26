@@ -13,18 +13,18 @@
  * @return {boolean}
  */
 var hasPathSum = function (root, sum) {
-  if (root == null) return false
-  if (root.left == null && root.right == null) return root.val == sum
-  var res = []
-  pathSum(root, 0)
-  return res.indexOf(sum) != -1
+  if (root == null) return false;
+  if (root.left == null && root.right == null) return root.val == sum;
+  var res = [];
+  pathSum(root, 0);
+  return res.indexOf(sum) != -1;
   function pathSum(root, val) {
-    if (root.left == null && root.right == null) res.push(root.val + val)
-    else if (root.left == null) pathSum(root.right, root.val + val)
-    else if (root.right == null) pathSum(root.left, root.val + val)
+    if (root.left == null && root.right == null) res.push(root.val + val);
+    else if (root.left == null) pathSum(root.right, root.val + val);
+    else if (root.right == null) pathSum(root.left, root.val + val);
     else {
-      pathSum(root.right, root.val + val)
-      pathSum(root.left, root.val + val)
+      pathSum(root.right, root.val + val);
+      pathSum(root.left, root.val + val);
     }
   }
 };

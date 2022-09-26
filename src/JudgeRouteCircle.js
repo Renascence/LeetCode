@@ -8,9 +8,9 @@ var judgeCircle = function (moves) {
     R: 0,
     U: 0,
     D: 0,
-  }
+  };
   moves.split('').forEach((move) => {
-    moveObj[move]++
-  })
-  return moveObj.L === moveObj.R && moveObj.U === moveObj.D
+    moveObj[move]++;
+  });
+  return moveObj.L === moveObj.R && moveObj.U === moveObj.D;
 };

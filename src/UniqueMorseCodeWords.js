@@ -3,21 +3,48 @@
  * @return {number}
  */
 var uniqueMorseRepresentations = function (words) {
-  const wordsMap = [".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."];
-  const morses = words.map(word => {
+  const wordsMap = [
+    '.-',
+    '-...',
+    '-.-.',
+    '-..',
+    '.',
+    '..-.',
+    '--.',
+    '....',
+    '..',
+    '.---',
+    '-.-',
+    '.-..',
+    '--',
+    '-.',
+    '---',
+    '.--.',
+    '--.-',
+    '.-.',
+    '...',
+    '-',
+    '..-',
+    '...-',
+    '.--',
+    '-..-',
+    '-.--',
+    '--..',
+  ];
+  const morses = words.map((word) => {
     let str = '';
-    for(let i =0; i< word.length; i++) {
-      str += wordsMap[word[i].charCodeAt() - 97]; 
+    for (let i = 0; i < word.length; i++) {
+      str += wordsMap[word[i].charCodeAt() - 97];
     }
-    return str
-  })
+    return str;
+  });
   const temp = {};
   let res = 0;
-  morses.forEach(item => {
-    if(!temp[item]) {
+  morses.forEach((item) => {
+    if (!temp[item]) {
       temp[item] = true;
-      res ++ 
+      res++;
     }
-  })
-  return res
+  });
+  return res;
 };

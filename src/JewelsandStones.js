@@ -4,17 +4,17 @@
  * @return {number}
  */
 var numJewelsInStones = function (J, S) {
-  let owns = {}
+  let owns = {};
   for (let i = 0; i < S.length; i++) {
     if (owns[S[i]]) {
-      owns[S[i]]++
+      owns[S[i]]++;
     } else {
-      owns[S[i]] = 1
+      owns[S[i]] = 1;
     }
   }
-  let res = 0
+  let res = 0;
   for (let j = 0; j < J.length; j++) {
-    if(owns[J[j]]) res += owns[J[j]]
+    if (owns[J[j]]) res += owns[J[j]];
   }
-  return res
+  return res;
 };

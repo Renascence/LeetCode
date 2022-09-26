@@ -3,15 +3,14 @@
  * @return {number}
  */
 var distributeCandies = function (candies) {
-  let hash = []
-  let len = 0
+  let hash = [];
+  let len = 0;
   candies.forEach((item) => {
     if (!hash[item]) {
       hash[item] = 1;
-      len++
+      len++;
     }
-  })
-  const res = candies.length / len >= 2 ? len : candies.length / 2
-  return res
+  });
+  const res = candies.length / len >= 2 ? len : candies.length / 2;
+  return res;
 };
-

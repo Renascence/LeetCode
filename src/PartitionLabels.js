@@ -3,10 +3,11 @@
  * @return {number[]}
  */
 var partitionLabels = function (S) {
-  const len = S.length
-  const hash = []
-  let start = 0, end = 0
-  const res = []
+  const len = S.length;
+  const hash = [];
+  let start = 0,
+    end = 0;
+  const res = [];
   for (var i = 0; i < len; i++) {
     hash[S[i].charCodeAt() - 97] = i;
   }
@@ -17,5 +18,5 @@ var partitionLabels = function (S) {
       start = end + 1;
     }
   }
-  return res
+  return res;
 };

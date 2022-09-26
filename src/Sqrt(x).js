@@ -3,19 +3,19 @@
  * @return {number}
  */
 var mySqrt = function (x) {
-  if( x == 0) return 0
-  var left = 0
-  var right = parseInt(x / 2) + 1
+  if (x == 0) return 0;
+  var left = 0;
+  var right = parseInt(x / 2) + 1;
   while (left <= right) {
-    var mid = parseInt((left + right) / 2)
-    var sq = mid * mid
+    var mid = parseInt((left + right) / 2);
+    var sq = mid * mid;
     if (sq == x) {
-      return mid
+      return mid;
     } else if (sq < x) {
-      left = mid + 1 
+      left = mid + 1;
     } else {
-      right = mid - 1
+      right = mid - 1;
     }
   }
-  return right
+  return right;
 };

@@ -3,25 +3,26 @@
  * @return {number}
  */
 var findLHS = function (nums) {
-  let hash = {}
-  let res = 0
+  let hash = {};
+  let res = 0;
   nums.forEach((item, index) => {
-    if (hash[item]) hash[item]++
-    else hash[item] = 1
-  })
+    if (hash[item]) hash[item]++;
+    else hash[item] = 1;
+  });
   Object.keys(hash).forEach((key) => {
-    let temp = 0
+    let temp = 0;
     if (!hash[parseInt(key) + 1] && !hash[parseInt(key) + 1]) {
-
-      return
+      return;
     } else if (!hash[parseInt(key) + 1]) {
-      temp = hash[parseInt(key) - 1] + hash[parseInt(key)]
+      temp = hash[parseInt(key) - 1] + hash[parseInt(key)];
     } else if (!hash[parseInt(key) - 1]) {
-      temp = hash[parseInt(key) + 1] + hash[parseInt(key)]
+      temp = hash[parseInt(key) + 1] + hash[parseInt(key)];
     } else {
-      temp = Math.max(hash[parseInt(key) + 1], hash[parseInt(key) - 1]) + hash[parseInt(key)]
+      temp =
+        Math.max(hash[parseInt(key) + 1], hash[parseInt(key) - 1]) +
+        hash[parseInt(key)];
     }
-    res = res > temp ? res : temp
-  })
-  return res
+    res = res > temp ? res : temp;
+  });
+  return res;
 };

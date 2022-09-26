@@ -4,10 +4,10 @@
  * @param {number[]} nums
  * @return {number}
  */
-var singleNumber = function(nums) {
-  var res = ''
-  for(i in nums){
-  	res = res ^ nums[i]
-  } 
-  return res
+var singleNumber = function (nums) {
+  var res = '';
+  for (i in nums) {
+    res = res ^ nums[i];
+  }
+  return res;
 };

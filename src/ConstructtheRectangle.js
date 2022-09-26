@@ -4,10 +4,10 @@
  */
 var constructRectangle = function (area) {
   var w = area;
-  var res = [area,1]
-  while(w >= area/w) {
-    if(area%w == 0) res=[w,area/w]
-    w--
+  var res = [area, 1];
+  while (w >= area / w) {
+    if (area % w == 0) res = [w, area / w];
+    w--;
   }
-  return res
+  return res;
 };

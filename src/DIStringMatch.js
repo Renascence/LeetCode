@@ -1,4 +1,4 @@
-var diStringMatch = function(S) {
+var diStringMatch = function (S) {
   const len = S.length;
   let min = 0;
   let max = len;

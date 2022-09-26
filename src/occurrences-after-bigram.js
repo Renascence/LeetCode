@@ -5,12 +5,12 @@
  * @return {string[]}
  */
 var findOcurrences = function (text, first, second) {
-  const arr = text.split(' ')
-  let res = []
+  const arr = text.split(' ');
+  let res = [];
   for (let i = 0; i < arr.length - 2; i++) {
     if (arr[i] === first && arr[i + 1] === second) {
-      res.push(arr[i + 2])
+      res.push(arr[i + 2]);
     }
   }
-  return res
+  return res;
 };

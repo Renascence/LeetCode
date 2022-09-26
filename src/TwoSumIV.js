@@ -11,18 +11,17 @@
  * @return {boolean}
  */
 var findTarget = function (root, k) {
-  let arr = []
+  let arr = [];
   function dfs(node) {
-    if (!node) return
-    dfs(node.left)
-    arr.push(node.val)
-    dfs(node.right)
+    if (!node) return;
+    dfs(node.left);
+    arr.push(node.val);
+    dfs(node.right);
   }
-  dfs(root)
+  dfs(root);
   for (let i = 0; i < arr.length; i++) {
-    const index = arr.indexOf(k - arr[i]) 
-    if (index !== -1 && index !== i)
-      return true
+    const index = arr.indexOf(k - arr[i]);
+    if (index !== -1 && index !== i) return true;
   }
-  return false
+  return false;
 };

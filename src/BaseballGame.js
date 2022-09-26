@@ -8,15 +8,15 @@ var calPoints = function (ops) {
   ops.forEach((_, index) => {
     const len = arr.length;
     if (_ === '+') {
-      arr.push(arr[len - 1] + arr[len - 2])
+      arr.push(arr[len - 1] + arr[len - 2]);
     } else if (_ === 'D') {
-      arr.push(arr[len - 1] * 2)
+      arr.push(arr[len - 1] * 2);
     } else if (_ === 'C') {
-      arr.pop()
+      arr.pop();
     } else {
-      arr.push(parseInt(_))
+      arr.push(parseInt(_));
     }
-  })
-  arr.forEach(_ => res += _)
-  return res
+  });
+  arr.forEach((_) => (res += _));
+  return res;
 };

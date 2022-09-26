@@ -6,8 +6,8 @@
  * @param {number[]} nums
  * @return {number}
  */
-var majorityElement = function(nums) {
-	nums.sort()
-	var res = Math.floor(nums.length/2)
-	return nums[res]
+var majorityElement = function (nums) {
+  nums.sort();
+  var res = Math.floor(nums.length / 2);
+  return nums[res];
 };

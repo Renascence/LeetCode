@@ -4,17 +4,16 @@
 
 // Find the letter that was added in t.
 
-var findTheDifference = function(s, t) {
-	var sarr = []
-	for (var i = 0; i < 26; i++) {
-		sarr[i] = 0
-	}
+var findTheDifference = function (s, t) {
+  var sarr = [];
+  for (var i = 0; i < 26; i++) {
+    sarr[i] = 0;
+  }
   for (var i = 0; i < s.length; i++) {
-  	sarr[s.charCodeAt(i) - 97] ++
+    sarr[s.charCodeAt(i) - 97]++;
   }
   for (var i = 0; i < t.length; i++) {
-  	sarr[t.charCodeAt(i) - 97] --
+    sarr[t.charCodeAt(i) - 97]--;
   }
-  return String.fromCharCode(sarr.indexOf(-1)+97)
+  return String.fromCharCode(sarr.indexOf(-1) + 97);
 };
-

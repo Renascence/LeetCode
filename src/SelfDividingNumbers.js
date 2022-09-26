@@ -6,7 +6,7 @@
 var selfDividingNumbers = function (left, right) {
   var res = [];
   for (let i = left; i <= right; i++) {
-    if(isSelfDicidingNum(i)) res.push(i)
+    if (isSelfDicidingNum(i)) res.push(i);
   }
   return res;
 
@@ -14,9 +14,9 @@ var selfDividingNumbers = function (left, right) {
     var str = num.toString();
     for (let i = 0; i < str.length; i++) {
       if (num % str[i] !== 0) {
-        return false
+        return false;
       }
     }
-    return true
+    return true;
   }
 };

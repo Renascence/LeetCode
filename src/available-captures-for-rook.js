@@ -7,7 +7,7 @@ var numRookCaptures = function (board) {
     for (let i = 0; i < 8; i++) {
       for (let j = 0; j < 8; j++) {
         if (board[i][j] === 'R') {
-          return [i, j]
+          return [i, j];
         }
       }
     }
@@ -18,7 +18,7 @@ var numRookCaptures = function (board) {
     if (board[x][j] === 'B') {
       break;
     } else if (board[x][j] === 'p') {
-      res++
+      res++;
       break;
     }
   }
@@ -26,7 +26,7 @@ var numRookCaptures = function (board) {
     if (board[x][j] === 'B') {
       break;
     } else if (board[x][j] === 'p') {
-      res++
+      res++;
       break;
     }
   }
@@ -34,7 +34,7 @@ var numRookCaptures = function (board) {
     if (board[i][y] === 'B') {
       break;
     } else if (board[i][y] === 'p') {
-      res++
+      res++;
       break;
     }
   }
@@ -42,9 +42,9 @@ var numRookCaptures = function (board) {
     if (board[i][y] === 'B') {
       break;
     } else if (board[i][y] === 'p') {
-      res++
+      res++;
       break;
     }
   }
-  return res
+  return res;
 };

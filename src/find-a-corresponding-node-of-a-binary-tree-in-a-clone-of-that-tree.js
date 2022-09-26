@@ -12,20 +12,20 @@
  * @return {TreeNode}
  */
 
-var getTargetCopy = function(original, cloned, target) {
-  let res = null
-  const bfs = node => {
+var getTargetCopy = function (original, cloned, target) {
+  let res = null;
+  const bfs = (node) => {
     if (node.val === target.val) {
-      res = node
+      res = node;
     } else {
       if (node.left) {
-        bfs(node.left)
+        bfs(node.left);
       }
       if (node.right) {
-        bfs(node.right)
+        bfs(node.right);
       }
     }
-  }
-  bfs(cloned)
-  return res
+  };
+  bfs(cloned);
+  return res;
 };

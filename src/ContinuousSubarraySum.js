@@ -4,17 +4,17 @@
  * @return {boolean}
  */
 var checkSubarraySum = function (nums, k) {
-  let sum = 0
-  let remainder = {}
-  pre = 0
+  let sum = 0;
+  let remainder = {};
+  pre = 0;
   for (let i = 0; i < nums.length; i++) {
-    sum += nums[i]
-    let temp = (k == 0) ? sum : sum % k
+    sum += nums[i];
+    let temp = k == 0 ? sum : sum % k;
     if (remainder[temp]) {
-      return true
+      return true;
     }
-    remainder[pre] = 1
-    pre = temp
+    remainder[pre] = 1;
+    pre = temp;
   }
-  return false
+  return false;
 };

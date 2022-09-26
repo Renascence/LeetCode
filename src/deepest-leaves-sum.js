@@ -11,22 +11,22 @@
  * @return {number}
  */
 var deepestLeavesSum = function (root) {
-  let res = []
+  let res = [];
   const bfs = (node, level = 0) => {
     if (!node.left && !node.right) {
       if (res[level]) {
-        res[level] += node.val
+        res[level] += node.val;
       } else {
-        res[level] = node.val
+        res[level] = node.val;
       }
     }
     if (node.left) {
-      bfs(node.left, level + 1)
+      bfs(node.left, level + 1);
     }
     if (node.right) {
-      bfs(node.right, level + 1)
+      bfs(node.right, level + 1);
     }
-  }
-  bfs(root)
-  return res.pop()
+  };
+  bfs(root);
+  return res.pop();
 };

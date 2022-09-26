@@ -5,23 +5,23 @@
  */
 var combinationSum3 = function (k, n) {
   function dfs(res, temp, start, k, n) {
-    if (n < 0 || k < 0) return
+    if (n < 0 || k < 0) return;
     if (n == 0 && k == 0) {
-      res[res.length] = []
+      res[res.length] = [];
       for (var j in temp) {
-        res[res.length - 1].push(temp[j])
+        res[res.length - 1].push(temp[j]);
       }
-      return
+      return;
     }
     for (var i = start; i <= 9; i++) {
-      temp.push(i)
-      dfs(res, temp, i + 1, k - 1, n - i)
-      temp.length = temp.length - 1
+      temp.push(i);
+      dfs(res, temp, i + 1, k - 1, n - i);
+      temp.length = temp.length - 1;
     }
   }
-  var res = []
-  var temp = []
-  if (k < 1 || n < 1) return res
-  dfs(res, temp, 1, k, n)
-  return res
+  var res = [];
+  var temp = [];
+  if (k < 1 || n < 1) return res;
+  dfs(res, temp, 1, k, n);
+  return res;
 };

@@ -11,27 +11,27 @@
  * Total Submissions: 748.4K
  * Testcase Example:  '["MinStack","push","push","push","getMin","pop","top","getMin"]\n[[],[-2],[0],[-3],[],[],[],[]]'
  *
- * 
+ *
  * Design a stack that supports push, pop, top, and retrieving the minimum
  * element in constant time.
- * 
- * 
+ *
+ *
  * push(x) -- Push element x onto stack.
- * 
- * 
+ *
+ *
  * pop() -- Removes the element on top of the stack.
- * 
- * 
+ *
+ *
  * top() -- Get the top element.
- * 
- * 
+ *
+ *
  * getMin() -- Retrieve the minimum element in the stack.
- * 
- * 
- * 
- * 
+ *
+ *
+ *
+ *
  * Example:
- * 
+ *
  * MinStack minStack = new MinStack();
  * minStack.push(-2);
  * minStack.push(0);
@@ -77,7 +77,7 @@ MinStack.prototype.getMin = function () {
   return Math.min(...this.arr);
 };
 
-/** 
+/**
  * Your MinStack object will be instantiated and called as such:
  * var obj = Object.create(MinStack).createNew()
  * obj.push(x)

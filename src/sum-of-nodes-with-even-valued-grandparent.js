@@ -11,19 +11,19 @@
  * @return {number}
  */
 var sumEvenGrandparent = function (root) {
-  let res = 0
+  let res = 0;
   const bfs = (node, isParentEven = false, isGrandEven = false) => {
-    const isEven = node.val % 2 === 0
+    const isEven = node.val % 2 === 0;
     if (isGrandEven) {
-      res = res + node.val
+      res = res + node.val;
     }
     if (node.left) {
-      bfs(node.left, isEven, isParentEven)
+      bfs(node.left, isEven, isParentEven);
     }
     if (node.right) {
-      bfs(node.right, isEven, isParentEven)
+      bfs(node.right, isEven, isParentEven);
     }
-  }
-  bfs(root)
-  return res
+  };
+  bfs(root);
+  return res;
 };

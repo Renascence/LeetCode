@@ -10,17 +10,17 @@
  * @return {boolean}
  */
 var isUnivalTree = function (root) {
-  const num = root.val
-  let flag = true
+  const num = root.val;
+  let flag = true;
   function loop(root) {
-    if(!root) return
-    if(root.val != num) {
-      flag = false
-      return
+    if (!root) return;
+    if (root.val != num) {
+      flag = false;
+      return;
     }
-    loop(root.left)
-    loop(root.right)
+    loop(root.left);
+    loop(root.right);
   }
-  loop(root)
-  return flag
+  loop(root);
+  return flag;
 };

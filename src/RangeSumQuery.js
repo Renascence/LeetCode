@@ -5,7 +5,7 @@
  * @param {number[]} nums
  */
 var NumArray = function (nums) {
-  this.data = nums
+  this.data = nums;
 };
 
 /**
@@ -14,13 +14,12 @@ var NumArray = function (nums) {
  * @return {number}
  */
 NumArray.prototype.sumRange = function (i, j) {
-  var res = 0
+  var res = 0;
   for (var a = i; a <= j; a++) {
-    res += this.data[a]
+    res += this.data[a];
   }
-  return res
+  return res;
 };
-
 
 /**
  * Your NumArray object will be instantiated and called as such:
